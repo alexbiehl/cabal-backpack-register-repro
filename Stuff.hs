@@ -1,12 +1,11 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE TypeFamilies #-}
 module Stuff where
 
-import GHC.Generics
+data family T a
 
-data X = X
--- NOTE: comment out the following line and
--- the ABI hash calculation will work again.
-  deriving (Generic)
+-- NOTE: Uncomment this line to make it
+-- work again.
+data instance T Int = T Int
 
 test :: String
 test =
