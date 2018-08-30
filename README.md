@@ -53,3 +53,9 @@ doesn't seem to cause any errors once the deriving clause has been commented out
 
 I suspect there is something fishy somehwere around modules with family instances here,
 maybe the consistency check happens too early and loads interfaces although it shouldn't?
+
+## Update
+
+while I have no idea if the assumption, that GHC doesn't load dependencies (why else would it work to
+invoke --abi-hash withour package db, right?). Maybe we just need to be able to load the other sublibraries
+interface files?
