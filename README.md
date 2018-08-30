@@ -59,3 +59,9 @@ maybe the consistency check happens too early and loads interfaces although it s
 while I have no idea if the assumption, that GHC doesn't load dependencies (why else would it work to
 invoke --abi-hash withour package db, right?). Maybe we just need to be able to load the other sublibraries
 interface files?
+
+## Update 2
+
+Maybe it is not as drastic as it all seems. I realized that we can influence the search path for
+interfaces via the -i flag. I see we are passing `-i dist/build` already. Why not also
+pass `-i dist/build/indef`?
