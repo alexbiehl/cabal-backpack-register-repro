@@ -4,4 +4,4 @@ import Stuff
 
 doSomeStuff :: String
 doSomeStuff =
-  undefined
+  test
